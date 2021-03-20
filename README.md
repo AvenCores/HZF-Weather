@@ -12,4 +12,4 @@
 * Если появились вопросы, то пишите мне в Телеграм! @avencores
 
 # Telegram Channel
-* У HZF Weatherr есть свой Telegram-канал! @hzfnews
+* У HZF Weather есть свой Telegram-канал! @hzfnews
