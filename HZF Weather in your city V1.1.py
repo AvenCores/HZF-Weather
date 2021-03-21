@@ -35,7 +35,6 @@ __        __         _   _                 _                                    
                                                      |___/                                |___/
 Telegram Channel: t.me/hzfnews
 VK: vk.com/hzforum1
-
     """
     print(banner)
     menu = input('1 - Посмотреть погоду\n\n3 - Важная информация!\n\n0 Выход\n')
