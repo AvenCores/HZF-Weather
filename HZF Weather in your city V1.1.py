@@ -17,7 +17,7 @@ def pogru():
   w = observation.weather
 
   temp = w.temperature('celsius')['temp']
-  print(banner+ '\nВ городе: ' + str(w.detailed_status) + "\nТемпература в районе: " + str(temp) + '°C' +'\n\nНажмите ENTER для выхода в главное меню')
+  print(banner+ '\nВ городе ' + place + ' сейчас: ' + str(w.detailed_status) + "\nТемпература в районе: " + str(temp) + '°C' +'\n\nНажмите ENTER для выхода в главное меню')
   input()
 
 def info():
