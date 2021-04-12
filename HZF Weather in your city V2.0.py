@@ -20,7 +20,7 @@ def pogru():
   speed = w.wind()['speed']
   hum = w.humidity
   cloud = w.clouds
-  print(banner+ '\nВ городе ' + place + ' сейчас: ' + str(w.detailed_status) +"\nТемпература в районе: " + str(temp) + "\nСкорость ветра: " + str(speed) + " м/с" + '°C' + "\nВлажность: " + str(hum) + "%" + "\nОблачность: " + str(cloud) + "%" +'\n\nНажмите ENTER для выхода в главное меню')
+  print(banner+ '\nВ городе ' + place + ' сейчас: ' + str(w.detailed_status) +"\nТемпература в районе: " + str(temp) + "°С" + "\nСкорость ветра: " + str(speed) + " м/с" + "\nВлажность: " + str(hum) + "%" + "\nОблачность: " + str(cloud) + "%" +'\n\nНажмите ENTER для выхода в главное меню')
   input()
 
 def info():
