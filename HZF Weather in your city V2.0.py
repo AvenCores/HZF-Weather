@@ -1,7 +1,7 @@
 from pyowm import OWM
 from pyowm.utils.config import get_default_config
 
-version = 1.1
+version = 2.0
 
 def pogru():
   global banner
@@ -17,7 +17,9 @@ def pogru():
   w = observation.weather
 
   temp = w.temperature('celsius')['temp']
-  print(banner+ '\nВ городе ' + place + ' сейчас: ' + str(w.detailed_status) + "\nТемпература в районе: " + str(temp) + '°C' +'\n\nНажмите ENTER для выхода в главное меню')
+  speed = w.wind()['speed']
+  hum = w.humidity
+  print(banner+ '\nВ городе ' + place + ' сейчас: ' + str(w.detailed_status) +"\nТемпература в районе: " + str(temp) + '°C' + "\nВлажность: " + str(hum) + "%" + "\nСкорость ветра: " + str(speed) + " м/с" +'\n\nНажмите ENTER для выхода в главное меню')
   input()
 
 def info():
@@ -37,7 +39,7 @@ Telegram Channel: t.me/hzfnews
 VK: vk.com/hzforum1
     """
     print(banner)
-    menu = input('1 - Посмотреть погоду\n\n3 - Важная информация!\n\n0 Выход\n')
+    menu = input('1 - Посмотреть погоду\n\n2 - Важная информация!\n\n0 Выход\n')
     if menu == "0": exit()
     if menu == "1": pogru()
-    if menu == "3": info()
+    if menu == "2": info()
