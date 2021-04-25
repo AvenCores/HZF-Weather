@@ -16,11 +16,13 @@ def pogru():
   observation = mgr.weather_at_place(place)
   w = observation.weather
 
-  temp = w.temperature('celsius')['temp']
+  temp_max = w.temperature('celsius')['temp_max']
+  temp_medium = w.temperature('celsius')['temp']
+  temp_min = w.temperature('celsius')['temp_min']
   speed = w.wind()['speed']
   hum = w.humidity
   cloud = w.clouds
-  print(banner+ '\nВ городе ' + place + ' сейчас: ' + str(w.detailed_status) +"\nТемпература в районе: " + str(temp) + "°С" + "\nСкорость ветра: " + str(speed) + " м/с" + "\nВлажность: " + str(hum) + "%" + "\nОблачность: " + str(cloud) + "%" +'\n\nНажмите ENTER для выхода в главное меню')
+  print(banner+ '\nВ городе ' + place + ' сейчас: ' + str(w.detailed_status) + "\nМаксильмальная температура в районе: " + str(temp_max) + "°С" + "\nСредняя температура в районе: " + str(temp_medium) + "°С" + "\nМинимальная температура в районе: " + str(temp_min) + "°С" +"\nСкорость ветра: " + str(speed) + " м/с" + "\nВлажность: " + str(hum) + "%" + "\nОблачность: " + str(cloud) + "%" +'\n\nНажмите ENTER для выхода в главное меню')
   input()
 
 def info():
