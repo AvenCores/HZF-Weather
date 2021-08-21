@@ -1,7 +1,7 @@
 from pyowm import OWM
 from pyowm.utils.config import get_default_config
 
-version = 2.0
+version = 2.1
 
 def pogru():
   global banner
